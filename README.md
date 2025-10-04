@@ -1,12 +1,6 @@
 # Introduction to Zephyr
 
-Welcome to the Introduction to Zephyr course! You will find all of the example projects and solution code for the example projects in this repository. Follow the [Development Environment: Espressif](#development-environment-espressif) and [Getting Started](#getting-started) sections below to set up the Zephyr and ESP32 toolchain 
-
-The full Introduction to Zephyr video series can be found [here](https://www.youtube.com/watch?v=mTJ_vKlMS_4&list=PLEBQazB0HUyTmK2zdwhaf8bLwuEaDH-52&index=1):
-
-[![Introduction to Zephyr video series](https://img.youtube.com/vi/mTJ_vKlMS_4/0.jpg)](https://www.youtube.com/watch?v=mTJ_vKlMS_4&list=PLEBQazB0HUyTmK2zdwhaf8bLwuEaDH-52&index=1)
-
-> **Note**: The video series and development environment were built specifically around the ESP32. You are welcome to try a non-Espressif board, but I cannot promise it will work. Also, some features (e.g. WiFi) might not be available. There are notes after the *Getting Started* section on how to build Docker images for other targets.
+Welcome to the ZephyrPad
 
 ## Development Environment: Espressif
 
@@ -202,3 +196,4 @@ For more information about configuring the console over USB CDC ACM, see the fol
 ## License
 
 All software in this repository, unless otherwise noted, is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+
