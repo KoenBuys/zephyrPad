@@ -1,0 +1,40 @@
+// boards/esp32s3_stamp.overlay
+
+/ {
+	aliases {
+		led-strip = &ws2812;
+	};
+};
+
+&spi2 {
+	status = "okay";
+	pinctrl-0 = <&spim2_default>;
+	pinctrl-names = "default";
+	
+	ws2812: ws2812@0 {
+		compatible = "worldsemi,ws2812-spi";
+		reg = <0>;
+		spi-max-frequency = <6400000>;
+        spi-one-frame = <0xf0>;
+		spi-zero-frame = <0xc0>;
+        reset-delay = <0x32>;     // Default 
+        spi-lsb-first = <0>;
+
+        //spi-max-frequency = <4000000>;
+        //spi-one-frame = <0x40>;
+		//sspi-zero-frame = <0x70>;
+
+		chain-length = <140>;
+		
+		//color-mapping = <1 0 2>;  /* GRB */
+        color-mapping = <2 1 3>;  /* GRB */
+	};
+};
+
+&pinctrl {
+	spim2_default: spim2_default {
+		group1 {
+			pinmux = <SPIM2_MOSI_GPIO5>;
+		};
+	};
+};
